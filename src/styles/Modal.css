@@ -20,7 +20,7 @@
 }
 
 .modal {
-    width: 80vw;
+    width: 60vw;
     height: 70vh;
     background-color: #fff;
     background: #fff;
@@ -32,7 +32,7 @@
 
 .modalHeader {
     height: 50px;
-    background: #C92534;
+    background: #07318e;
     overflow: hidden;
 }
 
@@ -84,7 +84,7 @@
     border: none;
     font-size: 18px;
     color: #ffffff;
-    background: #C92534;
+    background: #07318e;
     transition: all 0.25s ease;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
     position: absolute;
