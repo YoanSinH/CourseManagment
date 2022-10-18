@@ -54,7 +54,7 @@ export function AllCurses() {
       {isOpen ? (<Modal setIsOpen={setIsOpen} data={data} id={sid}/>) : null}
       <div className="App-header">
         <div className="App-header-inner">
-          <h1 className="App-title">Cursos y Diplomados<br/>Laboratorio Financiero</h1>
+          <h2 className="App-title">Cursos y Diplomados<br/>Laboratorio Financiero</h2>
           <button onClick={() => navigateto("/create")}>crear curso</button>
         </div>
       </div>
@@ -63,18 +63,16 @@ export function AllCurses() {
           {curses.map(curse => {
             console.log("curse",curse.item.id);
             return (
-              <div className='col' key={curse.item.id}>
-                <div className='card'>
+                <div className='card' key={curse.item.id}>
                   <h4 id="name">{curse.item.name}</h4>
                   <p className='text' id="type">{curse.item.type}</p>
                   <p className='text' id="modality">{curse.item.modality}</p>
                   <p className='text' id="start_date">{curse.item.start_date}</p>
                   <div className='buttonsdiv'>
                     <button className='button' onClick={() => openModal(true,curse.item.id,curse)}>Ver más</button>
-                    <a href="https://google.com" target={'_blank'} rel="noopener noreferrer"><button className='button'>Inscribirse</button></a>
+                    <a href={curse.item.url_inscription} target={'_blank'} rel="noopener noreferrer"><button className='button'>Inscribirse</button></a>
                   </div>
                 </div>
-              </div>
             )
           })}
         </div>

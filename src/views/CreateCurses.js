@@ -19,11 +19,17 @@ export function CreateCurses() {
 
     const docRef = doc(collection(db, "curses"))
 
-    async function writeCurse(na, ty, ur) {
+    async function writeCurse({namei,typei,startDatei,schedulei,intensityi,pricei,discountsi,modalityi,urli}) {
         let data = {
-            name: na,
-            type: ty,
-            url_inscription: ur,
+            name: namei,
+            type: typei,
+            start_date: startDatei,
+            schedule: schedulei,
+            intensity: intensityi,
+            price: pricei,
+            discounts: discountsi,
+            modality: modalityi,
+            url_inscription: urli,
         }
         await setDoc(docRef, data);
         back();
@@ -52,7 +58,7 @@ export function CreateCurses() {
                 <input placeholder='Modalidad' value={modalityi} onChange={(e) => setModality(e.target.value)}></input>
                 <input placeholder='Link' value={urli} onChange={(e) => setUrl(e.target.value)}></input>
 
-                <button className='button' onClick={() => writeCurse(namei,typei,urli)}>Enviar</button>
+                <button className='button' onClick={() => writeCurse({namei,typei,urli,startDatei,schedulei,intensityi,pricei,discountsi,modalityi,urli})}>Enviar</button>
                 <button className='button' onClick={() => back()}>Volver</button>
             </div>
             </div>
