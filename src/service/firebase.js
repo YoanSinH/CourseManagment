@@ -1,8 +1,9 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+import { collection, getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: process.env.FIRE_APIKEY,
+  apiKey: "AIzaSyA1bvAsdRyUWgm1-DIoILkxJ0e-M6am0EM",
   authDomain: "gestionlabudem.firebaseapp.com",
   projectId: "gestionlabudem",
   storageBucket: "gestionlabudem.appspot.com",
@@ -13,5 +14,8 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app);
+const firestore = getFirestore(app);
+const colRef = collection(firestore, 'users');
 
-export { db }
+export { db, auth, firestore, colRef }
