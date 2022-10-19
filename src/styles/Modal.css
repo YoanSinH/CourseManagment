@@ -4,7 +4,7 @@
     background-color: rgba(0, 0, 0, 0.7);
     width: 100vw;
     height: 100vh;
-    z-index: 0;
+    z-index: 150;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -142,4 +142,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.mcard {
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
+    width: 300px;
+    height: 80px;
+    border-radius: 0px;
+    padding: 1em;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 0px 8px 1px;
+    margin: 5px;
+  }
+  
+span{
+    font-weight: bold;
 }

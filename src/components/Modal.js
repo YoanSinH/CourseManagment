@@ -21,26 +21,26 @@ export function Modal({ setIsOpen, data}) {
                 <div className="modalContent">
                     
                     <div className="col">
-                        <div className="card">
+                        <div className="mcard">
                             <p><span>Modalidad </span><br/>{data.modality}</p>
                         </div>
-                        <div className="card">
+                        <div className="mcard">
                             <p><span>Horario </span><br/>{data.schedule}</p>
                         </div>
                     </div>
                     <div className="col">
-                        <div className="card">
-                            <p><span>Horario </span><br/>{data.schedule}</p>
+                        <div className="mcard">
+                            <p><span>Fecha de inicio </span><br/>{data.start_date}</p>
                         </div>
-                        <div className="card">
+                        <div className="mcard">
                             <p><span>Precio </span><br/>${data.price}</p>
                         </div>
                     </div>
                     <div className="col">
-                        <div className="card">
+                        <div className="mcard">
                             <p><span>Intensidad </span><br/>{data.intensity} horas</p>
                         </div>
-                        <div className="card">
+                        <div className="mcard">
                         <p><span>Temáticas </span><br/>{data.topics}</p>
                         </div>
                     </div>
